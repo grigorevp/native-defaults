@@ -14,4 +14,4 @@ pluginManagement {
     }
 }
 rootProject.name = "native-defaults"
-
+enableFeaturePreview("GRADLE_METADATA")

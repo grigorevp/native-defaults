@@ -1,6 +1,7 @@
 plugins {
     kotlin("multiplatform") version "1.4.30"
     id("com.android.library")
+    id("maven-publish")
 }
 
 group = "com.github.grigorevp"
