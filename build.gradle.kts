@@ -2,10 +2,10 @@ plugins {
     kotlin("multiplatform") version "1.4.30"
     id("com.android.library")
     id("maven-publish")
+    signing
 }
 
-group = "com.github.grigorevp"
-version = "1.0"
+apply("publish.gradle.kts")
 
 repositories {
     google()
