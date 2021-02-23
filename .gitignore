@@ -1,5 +1,4 @@
 # Project exclude paths
 /build/
 /build/intermediates/javac/debug/classes/
-/publish.gradle.kts
 /local.properties
