@@ -12,48 +12,54 @@ repositories {
 }
 
 kotlin {
+
     android {
-        publishLibraryVariants("release")
+        publishLibraryVariants("release", "debug")
     }
-    iosX64("ios") {
+
+    iosArm64() {
         binaries {
-            framework {
-                baseName = "library"
-            }
+            framework()
         }
     }
+
+    iosX64() {
+        binaries {
+            framework()
+        }
+    }
+
     sourceSets {
-        val commonMain by getting
-        val commonTest by getting {
+
+        val commonMain by getting {
             dependencies {
-                implementation(kotlin("test-common"))
-                implementation(kotlin("test-annotations-common"))
+                implementation("org.jetbrains.kotlin:kotlin-stdlib-common:1.4.30")
             }
         }
+
         val androidMain by getting {
             dependencies {
-                implementation("com.google.android.material:material:1.3.0")
+                implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
             }
         }
-        val androidTest by getting {
-            dependencies {
-                implementation(kotlin("test-junit"))
-                implementation("junit:junit:4.13.2")
-            }
-        }
-        val iosMain by getting
-        val iosTest by getting
+
+        val iosArm64Main by getting
+
+        val iosX64Main by getting
+
     }
 }
 
 android {
     compileSdkVersion(29)
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
-    sourceSets["main"].java.srcDirs("src/androidMain/kotlin")
-    sourceSets["main"].resources.srcDirs("src/androidMain/resources")
     defaultConfig {
         minSdkVersion(24)
         targetSdkVersion(29)
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 

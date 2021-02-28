@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="Native (ios_arm64) " allPlatforms="Native []/Native [ios_arm64]" useProjectSettings="false" isTestModule="true" externalProjectId="native-defaults" isHmppProject="true" pureKotlinSourceFolders="$MODULE_DIR$/../../src/androidDebug/kotlin;/Users/petr/IdeaProjects/native-defaults/src/debug/kotlin;/Users/petr/IdeaProjects/native-defaults/src/debug/java;/Users/petr/IdeaProjects/native-defaults/src/androidDebugAndroidTest/kotlin;/Users/petr/IdeaProjects/native-defaults/src/androidDebugUnitTest/kotlin;/Users/petr/IdeaProjects/native-defaults/src/androidRelease/kotlin;/Users/petr/IdeaProjects/native-defaults/src/release/kotlin;/Users/petr/IdeaProjects/native-defaults/src/release/java;/Users/petr/IdeaProjects/native-defaults/src/androidReleaseUnitTest/kotlin;/Users/petr/IdeaProjects/native-defaults/src/iosArm64Main/kotlin;/Users/petr/IdeaProjects/native-defaults/src/iosArm64Main/kotlin;/Users/petr/IdeaProjects/native-defaults/src/iosX64Main/kotlin;/Users/petr/IdeaProjects/native-defaults/src/iosX64Main/kotlin;/Users/petr/IdeaProjects/native-defaults/src/commonMain/kotlin;/Users/petr/IdeaProjects/native-defaults/src/commonMain/kotlin;/Users/petr/IdeaProjects/native-defaults/src/commonMain/kotlin">
+        <dependsOnModuleNames>
+          <dependsOn>native-defaults:commonTest</dependsOn>
+          <dependsOn>native-defaults:iosTest</dependsOn>
+        </dependsOnModuleNames>
+        <sourceSets>
+          <sourceSet>native-defaults.commonMain</sourceSet>
+          <sourceSet>native-defaults.iosMain</sourceSet>
+          <sourceSet>native-defaults.commonTest</sourceSet>
+          <sourceSet>native-defaults.iosArm64Main</sourceSet>
+          <sourceSet>com.github.grigorevp.native-defaults.iosTest</sourceSet>
+        </sourceSets>
+        <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
+        <compilerSettings />
+        <compilerArguments>
+          <option name="languageVersion" value="1.4" />
+          <option name="apiVersion" value="1.4" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="multiPlatform" value="true" />
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+</module>

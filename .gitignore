@@ -2,3 +2,4 @@
 /build/
 /build/intermediates/javac/debug/classes/
 /local.properties
+/publish.gradle.kts
