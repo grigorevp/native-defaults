@@ -16,6 +16,9 @@ expect class NativeDefaults() {
     fun setBoolean(key: String, value: Boolean)
     fun getBoolean(key: String): Boolean?
 
+    fun setStringSet(key: String, set: Set<String>)
+    fun getStringSet(key: String): Set<String>?
+
     fun clearValue(key: String)
 
 }

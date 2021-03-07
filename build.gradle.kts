@@ -17,13 +17,7 @@ kotlin {
         publishLibraryVariants("release", "debug")
     }
 
-    iosArm64() {
-        binaries {
-            framework()
-        }
-    }
-
-    iosX64() {
+    ios() {
         binaries {
             framework()
         }
@@ -40,12 +34,11 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+                implementation("androidx.startup:startup-runtime:1.0.0")
             }
         }
 
-        val iosArm64Main by getting
-
-        val iosX64Main by getting
+        val iosMain by getting
 
     }
 }

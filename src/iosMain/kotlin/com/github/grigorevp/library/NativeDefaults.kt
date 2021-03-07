@@ -44,7 +44,18 @@ actual class NativeDefaults actual constructor() {
         return defaults.boolForKey(key)
     }
 
+    actual fun setStringSet(key: String, set: Set<String>) {
+        defaults.setObject(set.toList(), key)
+    }
+
+    actual fun getStringSet(key: String): Set<String>? {
+        val list = (defaults.objectForKey(key) as? List<*>)?.filterIsInstance<String>()
+        return list?.toSet()
+    }
+
     actual fun clearValue(key: String) {
         defaults.removeObjectForKey(key)
     }
+
+
 }

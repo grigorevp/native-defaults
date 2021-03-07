@@ -5,5 +5,4 @@
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
-  <component name="TestModuleProperties" production-module="native-defaults.iosMain" />
 </module>

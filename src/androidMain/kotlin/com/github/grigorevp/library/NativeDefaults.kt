@@ -8,7 +8,7 @@ import android.content.Context.MODE_PRIVATE
 actual class NativeDefaults actual constructor() {
 
     init {
-        require(isContextInitialized()) {"Please set context for NativeDefaults, using 'setContext(context: Context)' before initializing instances"}
+        require(isContextInitialized()) {"Context was not initialized during the app startup for some reason"}
     }
 
     companion object {
@@ -16,7 +16,7 @@ actual class NativeDefaults actual constructor() {
         @SuppressLint("StaticFieldLeak")
         private lateinit var context: Context
 
-        fun setContext(context: Context) {
+        internal fun setContext(context: Context) {
             Companion.context = context.applicationContext
         }
 
@@ -62,11 +62,19 @@ actual class NativeDefaults actual constructor() {
     }
 
     actual fun getBoolean(key: String): Boolean? {
-        return if (preferences.contains((key))) preferences.getBoolean(key, false) else null
+        return if (preferences.contains(key)) preferences.getBoolean(key, false) else null
     }
 
+    actual fun setStringSet(key: String, set: Set<String>) {
+        preferences.edit().putStringSet(key, set).apply()
+    }
+
+    actual fun getStringSet(key: String): Set<String>? {
+        return if (preferences.contains(key)) preferences.getStringSet(key, emptySet()) else null
+    }
     actual fun clearValue(key: String) {
         preferences.edit().remove(key).apply()
     }
+
 
 }
