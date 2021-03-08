@@ -27,34 +27,34 @@ Please avoid specifying `"Standard"` domain name as it is reserved and will thro
 To add values to the perisitence domain use:
 
 ```kotlin
-setString(key: String, value: String)
+defaults.setString(key: String, value: String)
 
-setInt(key: String, value: Int)
+defaults.setInt(key: String, value: Int)
 
-setFloat(key: String, value: Float)
+defaults.setFloat(key: String, value: Float)
 
-setBoolean(key: String, value: Boolean)
+defaults.setBoolean(key: String, value: Boolean)
 
-setStringSet(key: String, value: Set<String>)
+defaults.setStringSet(key: String, value: Set<String>)
 ```
 
 To get values use:
 
 ```kotlin
-getString(key: String): String?
+defaults.getString(key: String): String?
 
-getInt(key: String): Int?
+defaults.getInt(key: String): Int?
 
-getFloat(key: String): Float?
+defaults.getFloat(key: String): Float?
 
-getBoolean(key: String): Boolean?
+defaults.getBoolean(key: String): Boolean?
 
-getStringSet(key: String): Set<String>?
+defaults.getStringSet(key: String): Set<String>?
 ```
 
 To clear a value for key use:
 
 ```kotlin
-clearValue(key: String)
+defaults.clearValue(key: String)
 ```
 
