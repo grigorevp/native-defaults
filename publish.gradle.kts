@@ -2,7 +2,7 @@ apply(plugin = "maven-publish")
 apply(plugin = "signing")
 
 group = "com.github.grigorevp"
-version = "1.0.4"
+version = "1.0.5"
 
 
 afterEvaluate {
